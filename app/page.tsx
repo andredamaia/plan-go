@@ -2,64 +2,88 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <>
+      {/* HERO */}
+      <section className="hero">
+        <div className="hero-overlay"></div>
+
+        <div className="hero-content fade-up">
+          <h1>Explore o mundo com a gente</h1>
+          <p>
+            Viagens inesquecíveis, experiências únicas e destinos incríveis.
           </p>
+          <button>Ver pacotes</button>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+      </section>
+
+      {/* DESTINOS */}
+      <section className="section destinos fade-up">
+        <h2>Destinos Populares</h2>
+
+        <div className="cards">
+          <div className="card">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=600&q=80"
+              alt="Paris"
+              width={300}
+              height={200}
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            <h3>Paris</h3>
+            <p>A cidade do amor te espera.</p>
+          </div>
+
+          <div className="card">
+            <Image
+              src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80"
+              alt="Maldivas"
+              width={300}
+              height={200}
+            />
+            <h3>Maldivas</h3>
+            <p>Paraíso tropical exclusivo.</p>
+          </div>
+
+          <div className="card">
+            <Image
+  src="https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?auto=format&fit=crop&w=600&q=80"
+  alt="Roma"
+  width={300}
+  height={200}
+/>
+
+            <h3>Roma</h3>
+            <p>História, cultura e gastronomia.</p>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* SOBRE */}
+      <section className="section light slide-left">
+        <div className="about">
+          <div className="about-text">
+            <h2>Quem Somos</h2>
+            <p>
+              Somos uma agência especializada em criar experiências de viagem
+              personalizadas, com segurança, conforto e preços acessíveis.
+            </p>
+          </div>
+
+          <Image
+            src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80"
+            alt="Equipe viajando"
+            width={450}
+            height={300}
+            className="about-img"
+          />
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="cta zoom-in">
+        <h2>Pronto para sua próxima aventura?</h2>
+        <button>Fale com um consultor</button>
+      </section>
+
+    </>
   );
 }
